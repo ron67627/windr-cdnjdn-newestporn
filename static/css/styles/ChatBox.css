@@ -1,0 +1,118 @@
+#chat {
+    /* General styling */
+    padding: 15px;
+    position: fixed;
+    bottom: 74px;
+    right: 13px;
+    z-index: 99999999999;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    animation: bunnyHop 2s ease-in-out infinite;
+    border: 1px solid #0f396d;
+    display: none !important;
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Show when user clicks */
+body.user-clicked #chat {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure visible in fullscreen */
+#chat:fullscreen,
+#chat:-webkit-full-screen,
+#chat:-moz-full-screen {
+    visibility: visible !important;
+    display: block !important;
+    border: 1px solid #0f396d;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes bunnyHop {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    75% {
+        transform: translateY(-8px);
+    }
+}
+
+#chat img {
+    width: 45px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#chat span {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#chat p {
+    font-size: 16px;
+    padding-top: 3px;
+    font-weight: 400;
+    margin: 2px 0;
+    color: #333;
+    text-align: center;
+}
+
+#chat h4 {
+    margin: 5px 0;
+    padding: 0;
+    text-align: center;
+    font-weight: 600;
+    color: #0f396d;
+}
+
+#chat a {
+    margin: 0 auto;
+    display: block;
+    color: #0f396d;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+#chat a:hover {
+    color: #0a2a4d;
+}
+
+#chat .daisy {
+    position: absolute;
+    font-size: 47px;
+    color: #fff;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#chat .daisy svg {
+    fill: #fff;
+}
+
+#chat .arrow-down {
+    position: absolute;
+    font-size: 47px;
+    color: #fff;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
